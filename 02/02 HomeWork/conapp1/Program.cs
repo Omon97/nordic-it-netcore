@@ -6,6 +6,8 @@ namespace conapp1
     {
         static void Main(string[] args)
         {
+            double summ = 0;//Calculation
+
             while (true)
             {
                 Console.Clear();
@@ -34,35 +36,36 @@ namespace conapp1
 
                 if (calculation == "+")
                 {
-                    Console.WriteLine(firstNumber + secondNumber);
+                    summ = (firstNumber + secondNumber);
                 }
                 else if (calculation == "-")
                 {
-                    Console.WriteLine(firstNumber - secondNumber);
+                    summ = (firstNumber - secondNumber);
                 }
                 else if (calculation == "*")
                 {
-                    Console.WriteLine(firstNumber * secondNumber);
+                    summ = (firstNumber * secondNumber);
                 }
                 else if (calculation == "/")
                 {
                     if (secondNumber == 0)
-                        Console.WriteLine(0);
+                        summ = 0;
                     else
-                        Console.WriteLine(firstNumber / secondNumber);
+                        summ = (firstNumber / secondNumber);
                 }
                 else if (calculation == "%")
                 {
-                    Console.WriteLine(firstNumber % secondNumber);
+                    summ = (firstNumber % secondNumber);
                 }
                 else if (calculation == "^")
                 {
-                    Console.WriteLine(Math.Pow(firstNumber, secondNumber));
+                    summ = (Math.Pow(firstNumber, secondNumber));
                 }
                 else
                 {
                     Console.WriteLine("You must choose calculation!");
                 }
+                Console.WriteLine(summ);
                 Console.ReadLine();
             }
         }
